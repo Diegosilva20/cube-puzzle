@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqp17fn4ds2gq"]
+
+[ext_resource type="Script" uid="uid://dpd5kj8jtc7uv" path="res://scripts/cube_game.gd" id="1_t2gvo"]
+[ext_resource type="PackedScene" uid="uid://o2h06apfh42w" path="res://cenas/objetos/cube.tscn" id="1_w4l76"]
+[ext_resource type="Script" uid="uid://ce3rwbl6h2qrm" path="res://scripts/camera_orbit.gd" id="3_74av0"]
+
+[node name="CubeGame" type="Node3D"]
+script = ExtResource("1_t2gvo")
+
+[node name="cube" parent="." instance=ExtResource("1_w4l76")]
+
+[node name="PivoRotacao" type="Node3D" parent="."]
+
+[node name="PivoCamera" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="PivoCamera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+script = ExtResource("3_74av0")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="PivoCamera"]
+transform = Transform3D(1, 0, 0, 0, 0.84663934, 0.5321672, 0, -0.5321672, 0.84663934, 0, 0, 0)
