@@ -11,7 +11,7 @@ var zoom_minimo = 5.0
 var zoom_maximo = 15.0
 
 func _ready():
-	zoom_minimo = position.z
+	zoom_minimo = position.z - 3.0
 	zoom_maximo = zoom_minimo + 10.0
 
 func _process(delta):
