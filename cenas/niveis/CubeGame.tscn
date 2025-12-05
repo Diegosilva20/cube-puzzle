@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dpd5kj8jtc7uv" path="res://scripts/cube_game.gd" id="1_t2gvo"]
 [ext_resource type="PackedScene" uid="uid://o2h06apfh42w" path="res://cenas/objetos/cube.tscn" id="1_w4l76"]
 [ext_resource type="Script" uid="uid://ce3rwbl6h2qrm" path="res://scripts/camera_orbit.gd" id="3_74av0"]
-[ext_resource type="Texture2D" uid="uid://dcw25ns3ydunw" path="res://assets/background/Fotografia-360-graus-03.jpg" id="4_2u326"]
+[ext_resource type="Texture2D" uid="uid://c5u13412qjym5" path="res://assets/background/serra.jpg" id="4_2u326"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehgjo"]
 albedo_texture = ExtResource("4_2u326")
