@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dqp17fn4ds2gq"]
+[gd_scene load_steps=8 format=3 uid="uid://dqp17fn4ds2gq"]
 
 [ext_resource type="Script" uid="uid://dpd5kj8jtc7uv" path="res://scripts/cube_game.gd" id="1_t2gvo"]
 [ext_resource type="PackedScene" uid="uid://o2h06apfh42w" path="res://cenas/objetos/cube.tscn" id="1_w4l76"]
 [ext_resource type="Script" uid="uid://ce3rwbl6h2qrm" path="res://scripts/camera_orbit.gd" id="3_74av0"]
 [ext_resource type="Texture2D" uid="uid://c5u13412qjym5" path="res://assets/background/serra.jpg" id="4_2u326"]
+[ext_resource type="PackedScene" uid="uid://mw3n24ssif0q" path="res://cenas/ui/MenuPausa.tscn" id="5_ehgjo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehgjo"]
 albedo_texture = ExtResource("4_2u326")
@@ -64,6 +65,11 @@ light_volumetric_fog_energy = 0.0
 light_specular = 0.0
 shadow_enabled = true
 shadow_blur = 10.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MenuPausa" parent="CanvasLayer" instance=ExtResource("5_ehgjo")]
+mouse_filter = 2
 
 [connection signal="pressed" from="HUD/Reset" to="." method="_on_reset_pressed"]
 [connection signal="pressed" from="HUD/Button" to="." method="_on_button_pressed"]
